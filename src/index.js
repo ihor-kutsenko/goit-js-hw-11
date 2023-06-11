@@ -12,7 +12,16 @@ import axios from "axios";
 
 const form = document.querySelector('#search-form');
 const gallery = document.querySelector('.gallery');
-const loadBtn = document.querySelector('.load-more')
+const loadBtn = document.querySelector('.load-more');
+
+let lightbox = new SimpleLightbox('.gallery a',
+    {
+        overlayOpacity: 1,
+        captionDelay: 250,
+        nav: true,
+        widthRatio: 1,
+        heightRatio: 1
+    });
 
 
 
@@ -43,7 +52,7 @@ async function createGallery(event) {
       
       gallery.insertAdjacentHTML('beforeend', markup);
 
-      const lightbox = new SimpleLightbox('.gallery a');
+      // const lightbox = new SimpleLightbox('.gallery a');
 
     } catch (error) {
       Notiflix.Notify.failure('Something went wrong!')
@@ -62,11 +71,11 @@ async function loadNextGallery(event) {
   
   pageNumber += 1;
    const nextPage = await fetchImages(name, pageNumber);
-  // console.log(nextPage);
+  
   const nextMarkup = await renderGalleryCard(nextPage.hits);
   gallery.insertAdjacentHTML('beforeend', nextMarkup);
 
-  const lightbox = new SimpleLightbox('.gallery a');
+  
   lightbox.refresh();
   
    

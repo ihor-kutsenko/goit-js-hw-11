@@ -52,6 +52,8 @@ async function createGallery(event) {
       
       gallery.insertAdjacentHTML('beforeend', markup);
 
+  lightbox.refresh();
+
       // const lightbox = new SimpleLightbox('.gallery a');
 
     } catch (error) {

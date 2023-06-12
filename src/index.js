@@ -13,7 +13,7 @@ import axios from "axios";
 
 
 
- lightbox = new SimpleLightbox('.gallery a',
+ let lightbox = new SimpleLightbox('.gallery a',
     {
         overlayOpacity: 1,
         captionDelay: 250,

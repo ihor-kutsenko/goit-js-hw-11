@@ -1,8 +1,8 @@
-
-import fetchImages from './PixabayAPI';
-import renderGalleryCard from './renderGalleryCard';
-import imagesScroll from './imagesScroll';
-import scrollFunction from './scrollUpFunction';
+import {form, gallery, loadBtn,  footer, title} from './app/refs';
+import fetchImages from './app/PixabayAPI';
+import renderGalleryCard from './app/renderGalleryCard';
+import imagesScroll from './app/imagesScroll';
+import scrollFunction from './app/scrollUpFunction';
 
 import Notiflix from 'notiflix';
 import SimpleLightbox from "simplelightbox";
@@ -12,14 +12,6 @@ import axios from "axios";
 
 
 
-const form = document.querySelector('#search-form');
-const gallery = document.querySelector('.gallery');
-const loadBtn = document.querySelector('.load-more');
-const input = document.querySelector('.search-input');
-const footer = document.querySelector('.footer');
-const title = document.querySelector('.search-title');
-const btnUp = document.querySelector('#to-top-btn');
-const btnUpWrapper = document.querySelector('.btn-up'),
 
  lightbox = new SimpleLightbox('.gallery a',
     {

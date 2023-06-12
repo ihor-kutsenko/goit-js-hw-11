@@ -1,6 +1,8 @@
 
 import fetchImages from './PixabayAPI';
 import renderGalleryCard from './renderGalleryCard';
+import imagesScroll from './imagesScroll';
+import scrollFunction from './scrollUpFunction';
 
 import Notiflix from 'notiflix';
 import SimpleLightbox from "simplelightbox";
@@ -15,9 +17,11 @@ const gallery = document.querySelector('.gallery');
 const loadBtn = document.querySelector('.load-more');
 const input = document.querySelector('.search-input');
 const footer = document.querySelector('.footer');
-const title = document.querySelector('.search-title')
+const title = document.querySelector('.search-title');
+const btnUp = document.querySelector('#to-top-btn');
+const btnUpWrapper = document.querySelector('.btn-up'),
 
-let lightbox = new SimpleLightbox('.gallery a',
+ lightbox = new SimpleLightbox('.gallery a',
     {
         overlayOpacity: 1,
         captionDelay: 250,
@@ -102,6 +106,8 @@ async function loadNextGallery(event) {
   const nextMarkup = await renderGalleryCard(nextPage.hits);
   gallery.insertAdjacentHTML('beforeend', nextMarkup);
 
+  imagesScroll();
+
   
   lightbox.refresh();
   
@@ -112,4 +118,6 @@ async function loadNextGallery(event) {
   
 }
 
+
+window.addEventListener('scroll', scrollFunction);
 

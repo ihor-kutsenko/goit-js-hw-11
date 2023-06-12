@@ -20,13 +20,32 @@
         <button class="search-button" type="submit">Search</button>
       </form>
     </header>
+
     <main>
       <h1 class="search-title"></h1>
-      <div class="gallery">
-        <!-- Картки зображень -->
-      </div>
+
+      <section class="container">
+        <!-- smoth scroll -->
+        <div class="btn-up">
+          <p class="btn-up-text">UP</p>
+          <button class="btn-up-wrapper__btn" id="to-top-btn" title="Go to top">
+            <svg class="icon-arrow" width="20" height="20" aria-label="up">
+              <use
+                class="arrow"
+                href="./images/symbol-defs.svg#icon-arrow"
+              ></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="gallery">
+          <!-- Картки зображень -->
+        </div>
+      </section>
+
       <button type="button" class="load-more is-hidden">Load more</button>
     </main>
+
     <footer class="footer"></footer>
   </body>
 </html>

@@ -1,25 +1,20 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 
-.is-hidden {
-  display: none;
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0;
 }
 
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-// .card-link {
-//   width: 540px;
-//   height: 400px;
-// }
-
-.photo-card {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+img {
+  display: block;
+  max-width: 100%;
   height: auto;
-  // justify-content: space-evenly;
+}
+
+a {
+  text-decoration: none;
 }

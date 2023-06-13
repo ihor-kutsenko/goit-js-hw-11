@@ -1,5 +1,4 @@
-// const btnUp = document.querySelector('#to-top-btn');
-// const btnUpWrapper = document.querySelector('.btn-up')
+
 import { btnUp } from "./refs";
 import { btnUpWrapper } from "./refs";
 

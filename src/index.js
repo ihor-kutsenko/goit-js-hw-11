@@ -37,6 +37,7 @@ async function createGallery(event) {
   event.preventDefault();
   gallery.innerHTML = '';
   footer.innerHTML = "";
+  title.textContent = "";
   pageNumber = 1;
   name = event.target.searchQuery.value.trim();
   const searchResult = await fetchImages(name, pageNumber);
